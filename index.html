@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prospect Form - BookTrust</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/css/multi-select-tag.css">
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="https://booktrust.org/"><img src="./images/btlogo.png" alt="Site Name" /></a>
+  </div>  
+    </header>
+    <section class="intrest_form">
+    <h1 class="title">Program Interest Form</h1>
+    <div class="container mt-5">
+    <form class="needs-validation"  action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DD6000000VY6t" method="POST">
+    <input type=hidden name="oid" value="00DD6000000VY6t">
+    <input type=hidden name="retURL" value="https://booktrust.org/">        
+   
+    <div class="mb-3">
+        <label class="form-label" for="first_name">First Name</label>
+    <input  id="first_name" class="form-control" maxlength="40" name="first_name" size="20" type="text" placeholder="Enter Your First Name" required/><br>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="last_name">Last Name</label>
+    <input class="form-control" id="last_name" maxlength="80" name="last_name" size="20" type="text" placeholder="Enter Your Last Name" required/><br>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="email">Email</label>
+    <input class="form-control" id="email" maxlength="80" name="email" size="20" type="email" placeholder="Enter Your Email"  required/><br>
+    </div>
+    <div class="mb-3">
+        <label class="form-label"  for="00ND600000SmIj1">Are you associated with a School, District, Organization, or Other?</label>
+    <select class="form-control" id="00ND600000SmIj1" name="00ND600000SmIj1" title="Associated" onchange="handlerAssociate()" required><option value="">--None--</option><option value="School">School</option>
+    <option value="District">District</option>
+    <option value="Organization">Organization</option>
+    <option value="Other">Other</option>
+    </select><br>
+    </div>
+    <div class="mb-3" id="istitle">
+        <label   for="00ND600000SmIjp">Is your School Title 1</label>
+    <input   id="00ND600000SmIjp" name="00ND600000SmIjp" type="checkbox" value="1" /><br>
+    
+    </div>
+    <div class="mb-3" id="supportTitle">
+        <label  for="00ND600000SmIju">Do you support Title 1 Schools?:</label>
+    <input  id="00ND600000SmIju" name="00ND600000SmIju" type="checkbox" value="1" /><br>
+    
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="00ND600000SmIki">What is your role?</label>
+    <select class="form-control" id="00ND600000SmIki" name="00ND600000SmIki" title="Role" onchange="handlerRole()" required>
+    <option value="">--None--</option>
+    <option value="Principle">Principle</option>
+    <option value="Teacher">Teacher</option>
+    <option value="Parent">Parent</option>
+    <option value="District Leader">District Leader</option>
+    <option value="Other">Other</option>
+    </select><br>
+    </div>
+    <div class="mb-3" id="OtherRole">
+        <label class="form-label"  for="00ND600000SmIkn">Other Role:</label>
+    <input class="form-control" id="00ND600000SmIkn" maxlength="80" name="00ND600000SmIkn" size="20" type="text"/><br>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" for="00ND600000SmIks">School Name:</label>  
+    <input class="form-control" id="00ND600000SmIks" maxlength="255" name="00ND600000SmIks" size="20" type="text" /><br>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="00ND600000SmIkx">School District Name:</label>
+    <input class="form-control" id="00ND600000SmIkx" maxlength="255" name="00ND600000SmIkx" size="20" type="text" /><br>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="00ND600000SmIl2">Organization Name:</label>
+    <input class="form-control" id="00ND600000SmIl2" maxlength="255" name="00ND600000SmIl2" size="20" type="text" /><br>
+    
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="lead_source">How did you find out about Book Trust?</label><select class="form-control" id="lead_source" name="lead_source"><option value="">--None--</option><option value="Advertisement">Advertisement</option>
+            <option value="Employee Referral">Employee Referral</option>
+            <option value="External Referral">External Referral</option>
+            <option value="Partner">Partner</option>
+            <option value="Public Relations">Public Relations</option>
+            <option value="Seminar - Internal">Seminar - Internal</option>
+            <option value="Seminar - Partner">Seminar - Partner</option>
+            <option value="Trade Show">Trade Show</option>
+            <option value="Web">Web</option>
+            <option value="Word of mouth">Word of mouth</option>
+            <option value="Other">Other</option>
+            </select><br>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="description">Please provide any additional detail on where you learned about Book Trust</label>
+        <textarea class="form-control" name="description"></textarea><br>
+    </div>
+    <div class="mb-3">
+        <label class="form-label"  for="00ND600000SmInN">Interest in Program for which School Year</label>
+    <select class="form-control" onchange="handlerFunction()" id="00ND600000SmInN" multiple="multiple" name="00ND600000SmInN" title="Program Year">
+    <option value="2024-25">2024-25</option>
+    <option value="2025-26">2025-26</option>
+    <option value="2026-27">2026-27</option>
+    <option value="2027-28">2027-28</option>
+    <option value="2028-29">2028-29</option>
+    <option value="2029-30">2029-30</option>
+    <option value="2030-31">2030-31</option>
+    <option value="2031-32">2031-32</option>
+    <option value="2032-33">2032-33</option>
+    <option value="2033-34">2033-34</option>
+    <option value="2034-25">2034-25</option>
+    </select><br>
+    </div>
+    <div class="mb-3">
+        <label for="00ND600000SmInX">Recognition of eligibility requirements</label>
+    <input id="00ND600000SmInX" name="00ND600000SmInX" type="checkbox" value="1" /><br>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="00ND600000SmInS">Is there anything else you would like to share?</label>
+    <textarea class="form-control" id="00ND600000SmInS" name="00ND600000SmInS" rows="3" type="text" wrap="soft"></textarea><br>
+    </div>    
+    
+    <input type="submit" name="submit" class="btn btn-primary">
+    
+    </form>
+</div>
+</section>
+<!-- Bootstrap JS (optional, but may be needed for certain components) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/js/multi-select-tag.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
