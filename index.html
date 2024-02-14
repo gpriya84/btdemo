@@ -12,30 +12,31 @@
 </head>
 <body>
     <header class="site-header">
-        <a href="https://booktrust.org/"><img src="./images/btlogo.png" alt="Site Name" /></a>
+        <a href=""><img src="./images/btlogo.png" alt="Site Name" /></a>
   </div>  
     </header>
     <section class="intrest_form">
     <h1 class="title">Program Interest Form</h1>
     <div class="container mt-5">
+     <p><span>*</span> Indicates required fields</p>    
     <form class="needs-validation"  action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DD6000000VY6t" method="POST">
     <input type=hidden name="oid" value="00DD6000000VY6t">
     <input type=hidden name="retURL" value="https://booktrust.org/">        
    
     <div class="mb-3">
-        <label class="form-label" for="first_name">First Name</label>
-    <input  id="first_name" class="form-control" maxlength="40" name="first_name" size="20" type="text" placeholder="Enter Your First Name" required/><br>
+        <label class="form-label" for="first_name"><span>*</span> First Name</label>
+    <input id="first_name" class="form-control" maxlength="40" name="first_name" size="20" type="text" placeholder="Enter Your First Name" required/><br>
     </div>
     <div class="mb-3">
-        <label class="form-label" for="last_name">Last Name</label>
+        <label class="form-label" for="last_name"><span>*</span> Last Name</label>
     <input class="form-control" id="last_name" maxlength="80" name="last_name" size="20" type="text" placeholder="Enter Your Last Name" required/><br>
     </div>
     <div class="mb-3">
-        <label class="form-label" for="email">Email</label>
+        <label class="form-label" for="email"><span>*</span> Email</label>
     <input class="form-control" id="email" maxlength="80" name="email" size="20" type="email" placeholder="Enter Your Email"  required/><br>
     </div>
     <div class="mb-3">
-        <label class="form-label"  for="00ND600000SmIj1">Are you associated with a School, District, Organization, or Other?</label>
+        <label class="form-label"  for="00ND600000SmIj1"><span>*</span> Are you associated with a School, District, Organization, or Other?</label>
     <select class="form-control" id="00ND600000SmIj1" name="00ND600000SmIj1" title="Associated" onchange="handlerAssociate()" required><option value="">--None--</option><option value="School">School</option>
     <option value="District">District</option>
     <option value="Organization">Organization</option>
@@ -53,7 +54,7 @@
     
     </div>
     <div class="mb-3">
-        <label class="form-label" for="00ND600000SmIki">What is your role?</label>
+        <label class="form-label" for="00ND600000SmIki"><span>*</span> What is your role?</label>
     <select class="form-control" id="00ND600000SmIki" name="00ND600000SmIki" title="Role" onchange="handlerRole()" required>
     <option value="">--None--</option>
     <option value="Principle">Principle</option>
@@ -64,7 +65,7 @@
     </select><br>
     </div>
     <div class="mb-3" id="OtherRole">
-        <label class="form-label"  for="00ND600000SmIkn">Other Role:</label>
+        <label class="form-label"  for="00ND600000SmIkn"><span>*</span> Other Role:</label>
     <input class="form-control" id="00ND600000SmIkn" maxlength="80" name="00ND600000SmIkn" size="20" type="text"/><br>
     </div>
 

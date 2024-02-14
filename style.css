@@ -39,3 +39,7 @@ label{
 #supportTitle{
     display: none;
 }
+
+span {
+    color:red;
+  }
