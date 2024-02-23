@@ -16,7 +16,7 @@
   </div>  
     </header>
     <section class="intrest_form">
-    <h1 class="title">Program Interest Form</h1>
+    <h1 class="title">Program Interest Form</h1>   
     <div class="container mt-5">
      <p><span>*</span> Indicates required fields</p>    
     <form class="needs-validation"  action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DD6000000VY6t" method="POST">
@@ -57,7 +57,7 @@
         <label class="form-label" for="00ND600000SmIki"><span>*</span> What is your role?</label>
     <select class="form-control" id="00ND600000SmIki" name="00ND600000SmIki" title="Role" onchange="handlerRole()" required>
     <option value="">--None--</option>
-    <option value="Principle">Principle</option>
+    <option value="Principal">Principal</option>
     <option value="Teacher">Teacher</option>
     <option value="Parent">Parent</option>
     <option value="District Leader">District Leader</option>
@@ -70,36 +70,23 @@
     </div>
 
     <div class="mb-3">
-        <label class="form-label" for="00ND600000SmIks">School Name:</label>  
-    <input class="form-control" id="00ND600000SmIks" maxlength="255" name="00ND600000SmIks" size="20" type="text" /><br>
-    </div>
-    <div class="mb-3">
-        <label class="form-label" for="00ND600000SmIkx">School District Name:</label>
-    <input class="form-control" id="00ND600000SmIkx" maxlength="255" name="00ND600000SmIkx" size="20" type="text" /><br>
-    </div>
-    <div class="mb-3">
-        <label class="form-label" for="00ND600000SmIl2">Organization Name:</label>
-    <input class="form-control" id="00ND600000SmIl2" maxlength="255" name="00ND600000SmIl2" size="20" type="text" /><br>
-    
-    </div>
-    <div class="mb-3">
-        <label class="form-label" for="lead_source">How did you find out about Book Trust?</label><select class="form-control" id="lead_source" name="lead_source"><option value="">--None--</option><option value="Advertisement">Advertisement</option>
-            <option value="Employee Referral">Employee Referral</option>
-            <option value="External Referral">External Referral</option>
-            <option value="Partner">Partner</option>
-            <option value="Public Relations">Public Relations</option>
-            <option value="Seminar - Internal">Seminar - Internal</option>
-            <option value="Seminar - Partner">Seminar - Partner</option>
-            <option value="Trade Show">Trade Show</option>
-            <option value="Web">Web</option>
-            <option value="Word of mouth">Word of mouth</option>
-            <option value="Other">Other</option>
-            </select><br>
-    </div>
-    <div class="mb-3">
-        <label class="form-label" for="description">Please provide any additional detail on where you learned about Book Trust</label>
-        <textarea class="form-control" name="description"></textarea><br>
-    </div>
+        <label class="form-label" for="company"><span>*</span>Please provide the name of the institution you’re representing (eg. School Name, School District Name, Organization Name)</label>
+    <input id="company" class="form-control" maxlength="40" name="company" size="20" type="text"  required/><br>
+                </div>
+    <div class="mb-3" id="00NO9000002JIL3">
+        <label class="form-label"  for="00NO9000002JIL3"><span>*</span> "How did you find out about Book Trust?"</label>
+    <select class="form-control" id="00NO9000002JIL3" name="00NO9000002JIL3" title="How did you find out about Book Trust type"text"/><br>
+    <option value="">--None--</option><option value="Search engine (Google, Bing, etc)">Search engine (Google, Bing, etc)</option>
+<option value="Recommended by a friend or colleague">Recommended by a friend or colleague</option>
+<option value="Social Media">Social Media</option>
+<option value="Blog or Publication">Blog or Publication</option>
+</select><br>
+</div>
+<div class="mb-3">
+    <label class="form-label"  for="00NO9000002JIkr">Please provide any additional detail on where you learned about Book Trust.</label>
+<textarea class="form-control" id="00NO9000002JIkr" name="00NO9000002JIkr" rows="3" type="text" wrap="soft"></textarea><br>
+</div>
+           
     <div class="mb-3">
         <label class="form-label"  for="00ND600000SmInN">Interest in Program for which School Year</label>
     <select class="form-control" onchange="handlerFunction()" id="00ND600000SmInN" multiple="multiple" name="00ND600000SmInN" title="Program Year">
@@ -121,8 +108,8 @@
     <input id="00ND600000SmInX" name="00ND600000SmInX" type="checkbox" value="1" /><br>
     </div>
     <div class="mb-3">
-        <label class="form-label" for="00ND600000SmInS">Is there anything else you would like to share?</label>
-    <textarea class="form-control" id="00ND600000SmInS" name="00ND600000SmInS" rows="3" type="text" wrap="soft"></textarea><br>
+        <label class="form-label" for="00NO9000002JJNZ">Is there anything else you would like to share?</label>
+    <textarea class="form-control" id="00NO9000002JJNZ" name="00NO9000002JJNZ" rows="3" type="text" wrap="soft"></textarea><br>
     </div>    
     
     <input type="submit" name="submit" class="btn btn-primary">
